@@ -2,9 +2,12 @@ from fastapi import FastAPI,status,HTTPException,APIRouter
 from db.db import supabase
 from schema.add_item import Add_Item
 
-route=APIRouter()
+route=APIRouter(
+     prefix='/add_item',
+    tags=["Post-Items"]
+)
 
-@route.post("/add_item")
+@route.post("")
 async def add_item(items:Add_Item,status_code=status.HTTP_200_OK):
     # print(items)
     items=items.dict()
