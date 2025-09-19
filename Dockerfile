@@ -4,11 +4,8 @@ WORKDIR /app
 
 ADD . .
 
-RUN pip install fastapi
+RUN pip install fastapi supabase uvicorn
 
-RUN pip install supabase
-
-RUN pip install uvicorn
 
 EXPOSE 8080
 
