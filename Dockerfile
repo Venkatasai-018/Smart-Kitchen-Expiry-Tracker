@@ -10,6 +10,6 @@ RUN pip install supabase
 
 RUN pip install uvicorn
 
-EXPOSE 8000
+EXPOSE 8080
 
 CMD ["python","main.py"]
