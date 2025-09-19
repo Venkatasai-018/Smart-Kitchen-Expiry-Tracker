@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from routes import get,post
+from routes import get,post,delete
 
 app = FastAPI()   
 
@@ -15,6 +15,7 @@ app.include_router(get.route)
 
 
 app.include_router(post.route)
+app.include_router(delete.route)
 
 
 if __name__ == "__main__":
